@@ -1,0 +1,443 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E940C3CF1B43C1E70000E965 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E940C3CE1B43C1E70000E965 /* main.m */; };
+		E940C3D21B43C1E70000E965 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E940C3D11B43C1E70000E965 /* AppDelegate.m */; };
+		E940C3D51B43C1E70000E965 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E940C3D41B43C1E70000E965 /* ViewController.m */; };
+		E940C3D81B43C1E70000E965 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E940C3D61B43C1E70000E965 /* Main.storyboard */; };
+		E940C3DA1B43C1E70000E965 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E940C3D91B43C1E70000E965 /* Images.xcassets */; };
+		E940C3DD1B43C1E70000E965 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E940C3DB1B43C1E70000E965 /* LaunchScreen.xib */; };
+		E940C3E91B43C1E70000E965 /* LCModalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E940C3E81B43C1E70000E965 /* LCModalTests.m */; };
+		E940C3F41B43C3D50000E965 /* NewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E940C3F31B43C3D50000E965 /* NewViewController.m */; };
+		E940C3F71B43C4D90000E965 /* UIViewController+LCModal.m in Sources */ = {isa = PBXBuildFile; fileRef = E940C3F61B43C4D90000E965 /* UIViewController+LCModal.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E940C3E31B43C1E70000E965 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E940C3C11B43C1E70000E965 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E940C3C81B43C1E70000E965;
+			remoteInfo = LCModal;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E940C3C91B43C1E70000E965 /* LCModal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LCModal.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E940C3CD1B43C1E70000E965 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E940C3CE1B43C1E70000E965 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E940C3D01B43C1E70000E965 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E940C3D11B43C1E70000E965 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E940C3D31B43C1E70000E965 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E940C3D41B43C1E70000E965 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E940C3D71B43C1E70000E965 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E940C3D91B43C1E70000E965 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E940C3DC1B43C1E70000E965 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		E940C3E21B43C1E70000E965 /* LCModalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LCModalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E940C3E71B43C1E70000E965 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E940C3E81B43C1E70000E965 /* LCModalTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCModalTests.m; sourceTree = "<group>"; };
+		E940C3F21B43C3D50000E965 /* NewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewViewController.h; sourceTree = "<group>"; };
+		E940C3F31B43C3D50000E965 /* NewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewViewController.m; sourceTree = "<group>"; };
+		E940C3F51B43C4D90000E965 /* UIViewController+LCModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+LCModal.h"; sourceTree = "<group>"; };
+		E940C3F61B43C4D90000E965 /* UIViewController+LCModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+LCModal.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E940C3C61B43C1E70000E965 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E940C3DF1B43C1E70000E965 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E940C3C01B43C1E70000E965 = {
+			isa = PBXGroup;
+			children = (
+				E940C3CB1B43C1E70000E965 /* LCModal */,
+				E940C3E51B43C1E70000E965 /* LCModalTests */,
+				E940C3CA1B43C1E70000E965 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E940C3CA1B43C1E70000E965 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E940C3C91B43C1E70000E965 /* LCModal.app */,
+				E940C3E21B43C1E70000E965 /* LCModalTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E940C3CB1B43C1E70000E965 /* LCModal */ = {
+			isa = PBXGroup;
+			children = (
+				E940C3F51B43C4D90000E965 /* UIViewController+LCModal.h */,
+				E940C3F61B43C4D90000E965 /* UIViewController+LCModal.m */,
+				E940C3D01B43C1E70000E965 /* AppDelegate.h */,
+				E940C3D11B43C1E70000E965 /* AppDelegate.m */,
+				E940C3D31B43C1E70000E965 /* ViewController.h */,
+				E940C3D41B43C1E70000E965 /* ViewController.m */,
+				E940C3D61B43C1E70000E965 /* Main.storyboard */,
+				E940C3D91B43C1E70000E965 /* Images.xcassets */,
+				E940C3DB1B43C1E70000E965 /* LaunchScreen.xib */,
+				E940C3CC1B43C1E70000E965 /* Supporting Files */,
+				E940C3F21B43C3D50000E965 /* NewViewController.h */,
+				E940C3F31B43C3D50000E965 /* NewViewController.m */,
+			);
+			path = LCModal;
+			sourceTree = "<group>";
+		};
+		E940C3CC1B43C1E70000E965 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E940C3CD1B43C1E70000E965 /* Info.plist */,
+				E940C3CE1B43C1E70000E965 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E940C3E51B43C1E70000E965 /* LCModalTests */ = {
+			isa = PBXGroup;
+			children = (
+				E940C3E81B43C1E70000E965 /* LCModalTests.m */,
+				E940C3E61B43C1E70000E965 /* Supporting Files */,
+			);
+			path = LCModalTests;
+			sourceTree = "<group>";
+		};
+		E940C3E61B43C1E70000E965 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E940C3E71B43C1E70000E965 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E940C3C81B43C1E70000E965 /* LCModal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E940C3EC1B43C1E70000E965 /* Build configuration list for PBXNativeTarget "LCModal" */;
+			buildPhases = (
+				E940C3C51B43C1E70000E965 /* Sources */,
+				E940C3C61B43C1E70000E965 /* Frameworks */,
+				E940C3C71B43C1E70000E965 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LCModal;
+			productName = LCModal;
+			productReference = E940C3C91B43C1E70000E965 /* LCModal.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E940C3E11B43C1E70000E965 /* LCModalTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E940C3EF1B43C1E70000E965 /* Build configuration list for PBXNativeTarget "LCModalTests" */;
+			buildPhases = (
+				E940C3DE1B43C1E70000E965 /* Sources */,
+				E940C3DF1B43C1E70000E965 /* Frameworks */,
+				E940C3E01B43C1E70000E965 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E940C3E41B43C1E70000E965 /* PBXTargetDependency */,
+			);
+			name = LCModalTests;
+			productName = LCModalTests;
+			productReference = E940C3E21B43C1E70000E965 /* LCModalTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E940C3C11B43C1E70000E965 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "iBoo Mobile";
+				TargetAttributes = {
+					E940C3C81B43C1E70000E965 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					E940C3E11B43C1E70000E965 = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = E940C3C81B43C1E70000E965;
+					};
+				};
+			};
+			buildConfigurationList = E940C3C41B43C1E70000E965 /* Build configuration list for PBXProject "LCModal" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E940C3C01B43C1E70000E965;
+			productRefGroup = E940C3CA1B43C1E70000E965 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E940C3C81B43C1E70000E965 /* LCModal */,
+				E940C3E11B43C1E70000E965 /* LCModalTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E940C3C71B43C1E70000E965 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E940C3D81B43C1E70000E965 /* Main.storyboard in Resources */,
+				E940C3DD1B43C1E70000E965 /* LaunchScreen.xib in Resources */,
+				E940C3DA1B43C1E70000E965 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E940C3E01B43C1E70000E965 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E940C3C51B43C1E70000E965 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E940C3F71B43C4D90000E965 /* UIViewController+LCModal.m in Sources */,
+				E940C3D51B43C1E70000E965 /* ViewController.m in Sources */,
+				E940C3D21B43C1E70000E965 /* AppDelegate.m in Sources */,
+				E940C3CF1B43C1E70000E965 /* main.m in Sources */,
+				E940C3F41B43C3D50000E965 /* NewViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E940C3DE1B43C1E70000E965 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E940C3E91B43C1E70000E965 /* LCModalTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E940C3E41B43C1E70000E965 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E940C3C81B43C1E70000E965 /* LCModal */;
+			targetProxy = E940C3E31B43C1E70000E965 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E940C3D61B43C1E70000E965 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E940C3D71B43C1E70000E965 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E940C3DB1B43C1E70000E965 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E940C3DC1B43C1E70000E965 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E940C3EA1B43C1E70000E965 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E940C3EB1B43C1E70000E965 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E940C3ED1B43C1E70000E965 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LCModal/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E940C3EE1B43C1E70000E965 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LCModal/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		E940C3F01B43C1E70000E965 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = LCModalTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LCModal.app/LCModal";
+			};
+			name = Debug;
+		};
+		E940C3F11B43C1E70000E965 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = LCModalTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LCModal.app/LCModal";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E940C3C41B43C1E70000E965 /* Build configuration list for PBXProject "LCModal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E940C3EA1B43C1E70000E965 /* Debug */,
+				E940C3EB1B43C1E70000E965 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E940C3EC1B43C1E70000E965 /* Build configuration list for PBXNativeTarget "LCModal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E940C3ED1B43C1E70000E965 /* Debug */,
+				E940C3EE1B43C1E70000E965 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E940C3EF1B43C1E70000E965 /* Build configuration list for PBXNativeTarget "LCModalTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E940C3F01B43C1E70000E965 /* Debug */,
+				E940C3F11B43C1E70000E965 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E940C3C11B43C1E70000E965 /* Project object */;
+}
