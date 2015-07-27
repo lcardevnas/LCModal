@@ -21,9 +21,7 @@
 {
     [super viewDidLoad];
     
-    
 }
-
 
 
 - (IBAction)showModal:(id)sender
@@ -31,17 +29,12 @@
     NewViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"NewViewController"];
     controller.view.frame = CGRectMake(0.0, 0.0, 320, 374);
     controller.delegate = self;
-    [self lc_presentViewController:controller completion:^{
-        NSLog(@"completed showing!");
-    }];
+    [self lc_presentViewController:controller completion:nil];
 }
 
 
-- (void)didPressedButtonInController:(NewViewController *)controller
-{
-    [self lc_dismissViewControllerWithCompletion:^{
-        NSLog(@"completed dismissing!");
-    }];
+- (void)didPressedButtonInController:(NewViewController *)controller {
+    [self lc_dismissViewControllerWithCompletion:nil];
 }
 
 
