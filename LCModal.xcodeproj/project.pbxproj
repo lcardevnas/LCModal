@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E902B95D1B66738300967892 /* UIViewController+LCModal.m in Sources */ = {isa = PBXBuildFile; fileRef = E902B95C1B66738300967892 /* UIViewController+LCModal.m */; };
 		E940C3CF1B43C1E70000E965 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E940C3CE1B43C1E70000E965 /* main.m */; };
 		E940C3D21B43C1E70000E965 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E940C3D11B43C1E70000E965 /* AppDelegate.m */; };
 		E940C3D51B43C1E70000E965 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E940C3D41B43C1E70000E965 /* ViewController.m */; };
@@ -15,7 +16,6 @@
 		E940C3DD1B43C1E70000E965 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E940C3DB1B43C1E70000E965 /* LaunchScreen.xib */; };
 		E940C3E91B43C1E70000E965 /* LCModalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E940C3E81B43C1E70000E965 /* LCModalTests.m */; };
 		E940C3F41B43C3D50000E965 /* NewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E940C3F31B43C3D50000E965 /* NewViewController.m */; };
-		E940C3F71B43C4D90000E965 /* UIViewController+LCModal.m in Sources */ = {isa = PBXBuildFile; fileRef = E940C3F61B43C4D90000E965 /* UIViewController+LCModal.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E902B95B1B66738300967892 /* UIViewController+LCModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+LCModal.h"; sourceTree = "<group>"; };
+		E902B95C1B66738300967892 /* UIViewController+LCModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+LCModal.m"; sourceTree = "<group>"; };
 		E940C3C91B43C1E70000E965 /* LCModal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LCModal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E940C3CD1B43C1E70000E965 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E940C3CE1B43C1E70000E965 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -44,8 +46,6 @@
 		E940C3E81B43C1E70000E965 /* LCModalTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCModalTests.m; sourceTree = "<group>"; };
 		E940C3F21B43C3D50000E965 /* NewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewViewController.h; sourceTree = "<group>"; };
 		E940C3F31B43C3D50000E965 /* NewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewViewController.m; sourceTree = "<group>"; };
-		E940C3F51B43C4D90000E965 /* UIViewController+LCModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+LCModal.h"; sourceTree = "<group>"; };
-		E940C3F61B43C4D90000E965 /* UIViewController+LCModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+LCModal.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +66,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E902B95A1B66737900967892 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				E902B95B1B66738300967892 /* UIViewController+LCModal.h */,
+				E902B95C1B66738300967892 /* UIViewController+LCModal.m */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		E902B95E1B66757700967892 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E940C3D91B43C1E70000E965 /* Images.xcassets */,
+				E940C3D61B43C1E70000E965 /* Main.storyboard */,
+				E940C3DB1B43C1E70000E965 /* LaunchScreen.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		E940C3C01B43C1E70000E965 = {
 			isa = PBXGroup;
 			children = (
@@ -87,18 +106,15 @@
 		E940C3CB1B43C1E70000E965 /* LCModal */ = {
 			isa = PBXGroup;
 			children = (
-				E940C3F51B43C4D90000E965 /* UIViewController+LCModal.h */,
-				E940C3F61B43C4D90000E965 /* UIViewController+LCModal.m */,
+				E902B95A1B66737900967892 /* Source */,
 				E940C3D01B43C1E70000E965 /* AppDelegate.h */,
 				E940C3D11B43C1E70000E965 /* AppDelegate.m */,
 				E940C3D31B43C1E70000E965 /* ViewController.h */,
 				E940C3D41B43C1E70000E965 /* ViewController.m */,
-				E940C3D61B43C1E70000E965 /* Main.storyboard */,
-				E940C3D91B43C1E70000E965 /* Images.xcassets */,
-				E940C3DB1B43C1E70000E965 /* LaunchScreen.xib */,
-				E940C3CC1B43C1E70000E965 /* Supporting Files */,
 				E940C3F21B43C3D50000E965 /* NewViewController.h */,
 				E940C3F31B43C3D50000E965 /* NewViewController.m */,
+				E902B95E1B66757700967892 /* Resources */,
+				E940C3CC1B43C1E70000E965 /* Supporting Files */,
 			);
 			path = LCModal;
 			sourceTree = "<group>";
@@ -229,7 +245,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E940C3F71B43C4D90000E965 /* UIViewController+LCModal.m in Sources */,
+				E902B95D1B66738300967892 /* UIViewController+LCModal.m in Sources */,
 				E940C3D51B43C1E70000E965 /* ViewController.m in Sources */,
 				E940C3D21B43C1E70000E965 /* AppDelegate.m in Sources */,
 				E940C3CF1B43C1E70000E965 /* main.m in Sources */,
