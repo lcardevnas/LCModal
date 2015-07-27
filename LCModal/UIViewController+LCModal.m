@@ -11,7 +11,6 @@
 
 #define kLCModalOverlayTag 1000
 #define kLCModalScreenshotTag 2000
-#define kLCModalPresentedViewTag 3000
 #define kLCModalPresentedControllerKey @"kLCModalPresentedControllerKey"
 
 
@@ -64,7 +63,6 @@
     initialRect.origin.x = 0.0;
     initialRect.origin.y = parent.view.frame.size.height;
     viewControllerToPresent.view.frame = initialRect;
-    viewControllerToPresent.view.tag = kLCModalPresentedViewTag;
     
     [parent addChildViewController:viewControllerToPresent];
     [parent.view addSubview:viewControllerToPresent.view];
