@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol NewViewDelegate;
+
 @interface NewViewController : UIViewController
+@property (nonatomic, weak) id <NewViewDelegate> delegate;
+@end
+
+
+@protocol NewViewDelegate <NSObject>
+
+- (void)didPressedButtonInController:(NewViewController *)controller;
 
 @end

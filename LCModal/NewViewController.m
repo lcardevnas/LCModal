@@ -24,6 +24,15 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)dealloc {
+    NSLog(@"deallocating new view controller");
+}
+
+
+- (IBAction)dismiss:(id)sender {
+    [self.delegate didPressedButtonInController:self];
+}
+
 /*
 #pragma mark - Navigation
 

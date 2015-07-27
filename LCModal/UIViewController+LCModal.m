@@ -7,27 +7,50 @@
 //
 
 #import "UIViewController+LCModal.h"
+#import <objc/runtime.h>
+
+#define kLCModalOverlayTag 1000
+#define kLCModalScreenshotTag 2000
+#define kLCModalPresentedViewTag 3000
+#define kLCModalPresentedControllerKey @"kLCModalPresentedControllerKey"
+
 
 @implementation UIViewController (LCModal)
 
+
+- (UIViewController *)presentedViewControllerParent
+{
+    UIViewController *parent = self;
+    while (parent.parentViewController) {
+        parent = parent.parentViewController;
+    }
+    return parent;
+}
+
+
 - (void)lc_presentViewController:(UIViewController *)viewControllerToPresent completion:(void (^)(void))completion
 {
-    NSLog(@"showing modal!");
+    
+    objc_setAssociatedObject(self, kLCModalPresentedControllerKey, viewControllerToPresent, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    
+    UIViewController *parent = [self presentedViewControllerParent];
     
     // adding overlay
     
     UIImageView *screenshot = [self takeScreenshot];
+    screenshot.tag = kLCModalScreenshotTag;
     
-    UIView *overlay = [[UIView alloc] initWithFrame:self.view.bounds];
+    UIView *overlay = [[UIView alloc] initWithFrame:parent.view.bounds];
     overlay.backgroundColor = [UIColor blackColor];
+    overlay.tag = kLCModalOverlayTag;
     [overlay addSubview:screenshot];
-    [self.view addSubview:overlay];
+    [parent.view addSubview:overlay];
     
     
     // adding dismiss area
     
     CGRect dismissArea = overlay.frame;
-    dismissArea.size.height = self.view.frame.size.height - viewControllerToPresent.view.frame.size.height;
+    dismissArea.size.height = parent.view.frame.size.height - viewControllerToPresent.view.frame.size.height;
     
     UIButton *dismissAreaButton = [[UIButton alloc] initWithFrame:dismissArea];
     [dismissAreaButton addTarget:self action:@selector(dismissModal) forControlEvents:UIControlEventTouchUpInside];
@@ -39,47 +62,21 @@
     
     CGRect initialRect = viewControllerToPresent.view.frame;
     initialRect.origin.x = 0.0;
-    initialRect.origin.y = self.view.frame.size.height;
+    initialRect.origin.y = parent.view.frame.size.height;
     viewControllerToPresent.view.frame = initialRect;
+    viewControllerToPresent.view.tag = kLCModalPresentedViewTag;
     
-    [self addChildViewController:viewControllerToPresent];
-    [self.view addSubview:viewControllerToPresent.view];
-    [viewControllerToPresent didMoveToParentViewController:self];
+    [parent addChildViewController:viewControllerToPresent];
+    [parent.view addSubview:viewControllerToPresent.view];
+    [viewControllerToPresent didMoveToParentViewController:parent];
     
-    [UIView animateWithDuration:0.3
-                     animations:^{
-                         
-                         // scalling the presenting view controller
-                         
-                         CATransform3D transform = CATransform3DIdentity;
-                         transform.m34 = 1.0 / -900;
-                         transform = CATransform3DScale(transform, 0.8, 0.8, 1);
-                         screenshot.layer.transform = transform;
-                         screenshot.alpha = 0.5;
-                         
-                         
-                         // showing the view controller to be presented
-                         
-                         CGRect newRect = viewControllerToPresent.view.frame;
-                         newRect.origin.y = 0.0 + dismissArea.size.height;
-                         viewControllerToPresent.view.frame = newRect;
-                         
-                     }
-                     completion:^(BOOL finished) {
-                         NSLog(@"completado");
-                     }];
     
-
+    [self animateModalOnPresentation:YES completion:completion];
 }
 
 
-- (void)lc_dismissViewControllerWithCompletion:(void (^)(void))completion
-{
-    NSLog(@"dismissing modal!");
-    
-    /*[self.currentSelectedController willMoveToParentViewController:nil];
-    [self.currentSelectedController.view removeFromSuperview];
-    [self.currentSelectedController removeFromParentViewController];*/
+- (void)lc_dismissViewControllerWithCompletion:(void (^)(void))completion {
+    [self animateModalOnPresentation:NO completion:completion];
 }
 
 
@@ -91,16 +88,70 @@
 }
 
 
-- (void)animateModalOnPresentation:(BOOL)presenting
+- (void)animateModalOnPresentation:(BOOL)present completion:(void (^)(void))completion
 {
+    UIViewController *parent = [self presentedViewControllerParent];
+    UIView *overlay = (UIView *)[parent.view viewWithTag:kLCModalOverlayTag];
+    UIImageView *screenshot = (UIImageView *)[overlay viewWithTag:kLCModalScreenshotTag];
     
+    UIViewController *presentedViewController = objc_getAssociatedObject(self, kLCModalPresentedControllerKey);
+    
+    [UIView animateWithDuration:0.3
+                     animations:^{
+                         
+                         // scalling the presenting view controller
+                         
+                         CATransform3D transform = CATransform3DIdentity;
+                         transform.m34 = 1.0 / -900;
+                         
+                         CGRect dismissArea = overlay.frame;
+                         if (present)
+                         {
+                             dismissArea.size.height = parent.view.frame.size.height - presentedViewController.view.frame.size.height;
+                             transform = CATransform3DScale(transform, 0.8, 0.8, 1);
+                             screenshot.layer.transform = transform;
+                             screenshot.alpha = 0.5;
+                         }
+                         else
+                         {
+                             dismissArea.size.height = parent.view.frame.size.height;
+                             screenshot.layer.transform = CATransform3DIdentity;
+                             screenshot.alpha = 1.0;
+                         }
+                         
+                         CGRect newRect = presentedViewController.view.frame;
+                         newRect.origin.y = dismissArea.size.height;
+                         presentedViewController.view.frame = newRect;
+                         
+                     }
+                     completion:^(BOOL finished) {
+                         
+                         if (!present)
+                         {
+                             [screenshot removeFromSuperview];
+                             [overlay removeFromSuperview];
+                             
+                             [parent willMoveToParentViewController:nil];
+                             [presentedViewController.view removeFromSuperview];
+                             [presentedViewController removeFromParentViewController];
+                             
+                             objc_setAssociatedObject(self, kLCModalPresentedControllerKey, nil, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+                         }
+                         
+                         if (completion) {
+                             completion();
+                         }
+                         
+                     }];
 }
 
 
 - (UIImageView *)takeScreenshot
 {
-    UIGraphicsBeginImageContextWithOptions(self.view.bounds.size, YES, [[UIScreen mainScreen] scale]);
-    [self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIViewController *parent = [self presentedViewControllerParent];
+    
+    UIGraphicsBeginImageContextWithOptions(parent.view.bounds.size, YES, [[UIScreen mainScreen] scale]);
+    [parent.view.layer renderInContext:UIGraphicsGetCurrentContext()];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     

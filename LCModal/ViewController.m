@@ -10,7 +10,7 @@
 #import "UIViewController+LCModal.h"
 #import "NewViewController.h"
 
-@interface ViewController ()
+@interface ViewController () <NewViewDelegate>
 
 @end
 
@@ -30,7 +30,18 @@
 {
     NewViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"NewViewController"];
     controller.view.frame = CGRectMake(0.0, 0.0, 320, 374);
-    [self lc_presentViewController:controller completion:nil];
+    controller.delegate = self;
+    [self lc_presentViewController:controller completion:^{
+        NSLog(@"completed showing!");
+    }];
+}
+
+
+- (void)didPressedButtonInController:(NewViewController *)controller
+{
+    [self lc_dismissViewControllerWithCompletion:^{
+        NSLog(@"completed dismissing!");
+    }];
 }
 
 
